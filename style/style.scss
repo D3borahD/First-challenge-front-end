@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+/*PrimaryColor*/ 
+$VeryDarkMagenta: hsl(300, 43%, 22%);
+$SoftPink: hsl(333, 80%, 67%);
+
+/*Neutral Color*/
+$DarkGrayishMagenta: hsl(303, 10%, 53%);
+$LightGrayisMagenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    background: url("bg-pattern-top-desktop.svg") fixed no-repeat, url("bg-pattern-bottom-desktop.svg")fixed no-repeat bottom right;
+    width: 1440px;
+}
+
+@media screen and (max-width: 375px) {
+    body{ 
+        display: block;
+    }
+}
+
+@media screen and (max-width: 375px) 
+{
+    body {
+        width: 100%;
+        background: url("bg-pattern-top-mobile.svg") fixed no-repeat, url("bg-pattern-bottom-mobile.svg")fixed no-repeat bottom right;
+        
+    }
+
+}
+
+
+
+.top {
+    margin: 90px 30px 80px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    > .header {
+        width: 35%;
+        > h1 {
+            font-weight: 700;
+            font-size: 3.5em;
+            line-height: 1em;
+            color: $VeryDarkMagenta;
+            margin-bottom: 5px;
+        }
+        > P {
+           color: $DarkGrayishMagenta;
+           line-height: 1.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .top {
+        display: block;
+        margin: 100px 35px 40px 10px ;
+        text-align: center;
+        > .header {
+            width: 100%;
+            margin-bottom: 30px;
+            justify-content: center;
+           > h1 {
+                margin: 30px 25px 20px 10px ;
+                font-size: 1.8em;
+            }
+            > p {
+                text-align: center;
+                font-size: 0.85em;
+            }
+        }
+    }
+}
+
+.star {
+    background: $LightGrayisMagenta;
+    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+    margin-top: 1em;
+    color: $VeryDarkMagenta;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 425px;
+    padding-left: 30px;
+   > .icon {
+       margin-left: 7px;
+   }
+   > p {
+       margin-left: 40px;
+       font-size: 15px;
+   }
+}
+.star:nth-child(2){
+    margin-left: -50px;
+}
+
+.star:nth-child(1){
+    margin-left: -100px;
+}
+
+@media screen and (max-width: 375px) {
+        .star {
+            display: block;
+            width: auto;
+            padding: 10px;
+            > p {
+                margin-left: 0;
+                font-size: 12px;
+                text-align: center;
+            }
+            > .icon {
+                height: 12px;
+            }
+        }
+        .star:nth-child(2){
+            margin-left: 0px;
+        }
+        .star:nth-child(1){
+            margin-left: 0px;
+        }   
+}
+
+/*2nd part*/
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 130px 50px 125px;
+}
+
+@media screen and (max-width: 375px) {
+    .bottom {
+        display: block;
+        margin: 0px 0px 3px 15px;   
+    }
+}
+
+.card {
+    height: 250px;
+    width: 375px;
+    border-radius: 10px;
+    background: $VeryDarkMagenta;
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+ @media screen and (max-width: 375px) {
+    .card {
+        width: 91%;
+        > .element {
+            h2 {
+                font-size: 15px;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.card:nth-child(2) {
+    margin-top: 15px;
+}
+
+.card:nth-child(3) {
+    margin-top: 30px;
+}
+  
+.card div {
+    width: 100%;
+    padding: 30px 20px 20px;
+}
+
+.card div:nth-child(1) {
+    height: 50px;
+    width: 50px;
+    > img {
+        border-radius: 50%;
+    }
+}
+.card div:nth-child(2) {
+    height: 25px;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    > h2 {
+        color: $White;
+        font-size: 15px;
+    }
+    > h3 {
+        margin-top: -10px;
+        color: $SoftPink;
+        font-size: 15px;
+    }
+}
+
+.card div:nth-child(3) {
+    height: 50%;
+    width: 100%;
+    >p {
+        color: $White;
+        line-height: 20px;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .card div:nth-child(1) {
+        height: 25px;
+        width: 25px;
+        > img {
+            border-radius: 50%;
+            height: 250%;
+        }
+    }
+    .card:nth-child(3) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}
